@@ -54,10 +54,4 @@ class GoogleDrive {
 
     print("Result ${response.toJson()}");
   }
-
-  Future<Map<String, dynamic>> getCredentials() async {
-    var result = await storag.readAll();
-    if (result.length == 0) return null;
-    return result;
-  }
 }

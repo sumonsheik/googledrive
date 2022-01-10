@@ -72,8 +72,8 @@ class _MyHomePageState extends State<MyHomePage> {
             ElevatedButton(
                 child: Text("UPLOAD"),
                 onPressed: () async {
-                  // var file = await FilePicker.getFile();
-                  await drive.getCredentials();
+                  var file = await FilePicker.getFile();
+                  await drive.upload(file);
                 })
           ],
         ),
